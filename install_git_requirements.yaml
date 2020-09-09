@@ -1,0 +1,11 @@
+---
+- name: installing git in all hosts 
+  hosts: all
+  gother_facts: false 
+
+  tasks:
+    - name: Install git
+      apt:
+        name: git
+        state: present
+        update_cache: yes
